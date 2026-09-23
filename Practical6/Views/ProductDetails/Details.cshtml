@@ -1,0 +1,25 @@
+﻿@model Practical6.Models.Product
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Product Details</title>
+</head>
+<body>
+    <h2>Selected Product Details</h2>
+    <p>Product Name: @Model.ProductName</p>
+    <img src="@Model.Imageurl" />
+    <br />
+    <p>Product Category: @Model.Category</p>
+    <p>Product Price: @Model.Price</p>
+    <br />
+    @Html.ActionLink(
+        "Back to Product Catalog",
+        "Index",
+        "ProductDetails"
+    )
+</body>
+</html>
